@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Personality Dice Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+    <header>
+        <h1>Personality Dice Game</h1>
+        <p>
+            Roll the dice and let the purple ball travel through the
+            personality board.
+        </p>
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- MAIN GAME AREA            -->
+    <!-- ========================= -->
+
+    <section id="gameArea">
+
+        <div id="boardPanel">
+
+            <canvas
+                id="boardCanvas"
+                width="600"
+                height="900">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+
+        </div>
+
+
+        <div id="controlPanel">
+
+            <h2>Controls</h2>
+
+            <button id="startBtn">
+                Start Game
+            </button>
+
+            <button id="rollBtn" disabled>
+                Roll Dice
+            </button>
+
+            <button id="newGameBtn">
+                New Game
+            </button>
+
+
+            <hr>
+
+            <h3>Dice</h3>
+
+            <div id="diceDisplay">
+                -
+            </div>
+
+
+            <h3>Round</h3>
+
+            <div id="roundDisplay">
+                1
+            </div>
+
+
+            <h3>Current Cell</h3>
+
+            <div id="currentCell">
+                ENTJ
+            </div>
+
+
+            <h3>Current Position</h3>
+
+            <div id="currentPosition">
+                1
+            </div>
+
+
+            <hr>
+
+            <h2>Assessment</h2>
+
+            <div id="resultBox">
+
+                <h3>Your Personality</h3>
+
+                <div id="personalityCode">
+                    ----
+                </div>
+
+                <div id="personalityName">
+                    Waiting...
+                </div>
+
+            </div>
+            <hr>
+
+<h2>Assessment Statistics</h2>
+
+<div id="statsPanel">
+
+<table id="statsTable">
+
+<thead>
+
+<tr>
+
+<th>Personality</th>
+
+<th>Title</th>
+
+<th>Visits</th>
+<th>Percentage </th>
+
+</tr>
+
+</thead>
+
+<tbody id="statsBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================= -->
+    <!-- HISTORY TABLE             -->
+    <!-- ========================= -->
+
+    <section id="historySection">
+
+        <h2>Movement History</h2>
+
+        <table id="historyTable">
+
+            <thead>
+
+            <tr>
+
+                <th>#</th>
+
+                <th>Round</th>
+
+                <th>Dice</th>
+
+                <th>Row</th>
+
+                <th>Column</th>
+
+                <th>Cell</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="historyBody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =================================== -->
+<!-- JAVASCRIPT FILES                    -->
+<!-- =================================== -->
+
+<script src="board.js"></script>
+
+<script src="player.js"></script>
+
+<script src="dice.js"></script>
+
+<script src="personality.js"></script>
+
+<script src="table.js"></script>
+
+<script src="game.js"></script>
+
+</body>
+</html>
